@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="robot_controllers" targetName="_robot_controllers_generate_messages_check_deps_TransitionGoal" />
+      <config projectName="robot_controllers" targetName="robot_controllers_generate_messages_py" />
+      <config projectName="robot_controllers" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="robot_controllers" targetName="run_tests" />
+      <config projectName="robot_controllers" targetName="download_extra_data" />
+      <config projectName="robot_controllers" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="robot_controllers" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="robot_controllers" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="robot_controllers" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="robot_controllers" targetName="robot_controllers_generate_messages_cpp" />
+      <config projectName="robot_controllers" targetName="gmock_main" />
+      <config projectName="robot_controllers" targetName="robot_controllers_genlisp" />
+      <config projectName="robot_controllers" targetName="doxygen" />
+      <config projectName="robot_controllers" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="robot_controllers" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="robot_controllers" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="robot_controllers" targetName="robot_controllers_genpy" />
+      <config projectName="robot_controllers" targetName="gtest_main" />
+      <config projectName="robot_controllers" targetName="robot_controllers_geneus" />
+      <config projectName="robot_controllers" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="robot_controllers" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="robot_controllers" targetName="gmock" />
+      <config projectName="robot_controllers" targetName="actionlib_generate_messages_py" />
+      <config projectName="robot_controllers" targetName="std_msgs_generate_messages_py" />
+      <config projectName="robot_controllers" targetName="actionlib_generate_messages_eus" />
+      <config projectName="robot_controllers" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="robot_controllers" targetName="clean_test_results" />
+      <config projectName="robot_controllers" targetName="_catkin_empty_exported_target" />
+      <config projectName="robot_controllers" targetName="_robot_controllers_generate_messages_check_deps_TransitionActionFeedback" />
+      <config projectName="robot_controllers" targetName="gtest" />
+      <config projectName="robot_controllers" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="robot_controllers" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="robot_controllers" targetName="transition_client" />
+      <config projectName="robot_controllers" targetName="robot_controllers_gencpp" />
+      <config projectName="robot_controllers" targetName="roscpp_generate_messages_py" />
+      <config projectName="robot_controllers" targetName="_robot_controllers_generate_messages_check_deps_TransitionFeedback" />
+      <config projectName="robot_controllers" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="robot_controllers" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="robot_controllers" targetName="robot_controllers_generate_messages" />
+      <config projectName="robot_controllers" targetName="wtf_client" />
+      <config projectName="robot_controllers" targetName="transition_controller" />
+      <config projectName="robot_controllers" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="robot_controllers" targetName="robot_controllers_gennodejs" />
+      <config projectName="robot_controllers" targetName="robot_controllers_generate_messages_nodejs" />
+      <config projectName="robot_controllers" targetName="roscpp_generate_messages_eus" />
+      <config projectName="robot_controllers" targetName="tests" />
+      <config projectName="robot_controllers" targetName="robot_controllers_generate_messages_eus" />
+      <config projectName="robot_controllers" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="robot_controllers" targetName="_robot_controllers_generate_messages_check_deps_TransitionActionGoal" />
+      <config projectName="robot_controllers" targetName="_robot_controllers_generate_messages_check_deps_TransitionActionResult" />
+      <config projectName="robot_controllers" targetName="_robot_controllers_generate_messages_check_deps_TransitionAction" />
+      <config projectName="robot_controllers" targetName="_robot_controllers_generate_messages_check_deps_TransitionResult" />
+      <config projectName="robot_controllers" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="robot_controllers" targetName="robot_controllers_generate_messages_lisp" />
+      <config projectName="robot_controllers" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="robot_controllers" targetName="actionlib_msgs_generate_messages_cpp" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCATKIN_DEVEL_PREFIX=/home/humanoid/ros/devel" GENERATION_DIR="$PROJECT_DIR$/../../build/robot_controllers" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a1d1def-daa0-4cd2-93a1-136db8973799" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/../../build/robot_controllers/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="63" column="75" selection-start-line="63" selection-start-column="75" selection-end-line="63" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transition_controller.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+              <folding>
+                <element signature="e#43#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wtf_client.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="3" column="47" selection-start-column="9" selection-end-line="3" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transition_client.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_client.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transition.action" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/action/Transition.action">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/action/transition.action" />
+        <option value="$PROJECT_DIR$/package.xml" />
+        <option value="$PROJECT_DIR$/action/Transition.action" />
+        <option value="$PROJECT_DIR$/src/TransitionController/wtf_client.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/TransitionController/transition_client.cpp" />
+        <option value="$PROJECT_DIR$/src/TransitionController/transition_controller.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-28" />
+    <option name="width" value="1920" />
+    <option name="height" value="1108" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="robot_controllers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_controllers" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="robot_controllers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_controllers" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="robot_controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robot_controllers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_controllers" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="robot_controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robot_controllers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_controllers" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="robot_controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="robot_controllers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_controllers" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="robot_controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TransitionController" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot-controller-ros/CMakeLists.txt" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.transition_controller">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="_catkin_empty_exported_target" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_catkin_empty_exported_target" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="_robot_controllers_generate_messages_check_deps_TransitionAction" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_robot_controllers_generate_messages_check_deps_TransitionAction" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="_robot_controllers_generate_messages_check_deps_TransitionActionFeedback" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_robot_controllers_generate_messages_check_deps_TransitionActionFeedback" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="_robot_controllers_generate_messages_check_deps_TransitionActionGoal" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_robot_controllers_generate_messages_check_deps_TransitionActionGoal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="_robot_controllers_generate_messages_check_deps_TransitionActionResult" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_robot_controllers_generate_messages_check_deps_TransitionActionResult" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="_robot_controllers_generate_messages_check_deps_TransitionFeedback" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_robot_controllers_generate_messages_check_deps_TransitionFeedback" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="_robot_controllers_generate_messages_check_deps_TransitionGoal" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_robot_controllers_generate_messages_check_deps_TransitionGoal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="_robot_controllers_generate_messages_check_deps_TransitionResult" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="_robot_controllers_generate_messages_check_deps_TransitionResult" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_generate_messages_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_generate_messages_eus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_generate_messages_lisp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_generate_messages_nodejs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_generate_messages_py" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_msgs_generate_messages_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_msgs_generate_messages_eus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_msgs_generate_messages_lisp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_msgs_generate_messages_nodejs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="actionlib_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="actionlib_msgs_generate_messages_py" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="clean_test_results" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="clean_test_results" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="download_extra_data" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="download_extra_data" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="doxygen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="doxygen" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="gmock" CONFIG_NAME="Debug" />
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="gmock_main" CONFIG_NAME="Debug" />
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="gtest" CONFIG_NAME="Debug" />
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="gtest_main" CONFIG_NAME="Debug" />
+    <configuration name="robot_controllers_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_gencpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_generate_messages" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_generate_messages_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_generate_messages_eus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_generate_messages_lisp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_generate_messages_nodejs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_generate_messages_py" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_geneus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_geneus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_genlisp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_gennodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_gennodejs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="robot_controllers_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="robot_controllers_genpy" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="roscpp_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="roscpp_generate_messages_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="roscpp_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="roscpp_generate_messages_eus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="roscpp_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="roscpp_generate_messages_lisp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="roscpp_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="roscpp_generate_messages_nodejs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="roscpp_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="roscpp_generate_messages_py" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="rosgraph_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="rosgraph_msgs_generate_messages_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="rosgraph_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="rosgraph_msgs_generate_messages_eus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="rosgraph_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="rosgraph_msgs_generate_messages_lisp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="rosgraph_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="rosgraph_msgs_generate_messages_nodejs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="rosgraph_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="rosgraph_msgs_generate_messages_py" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="run_tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="run_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="std_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="std_msgs_generate_messages_cpp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="std_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="std_msgs_generate_messages_eus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="std_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="std_msgs_generate_messages_lisp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="std_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="std_msgs_generate_messages_nodejs" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="std_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="std_msgs_generate_messages_py" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="transition_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="transition_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_client" />
+    <configuration name="transition_controller" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="transition_controller" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="transition_controller" />
+    <configuration name="wtf_client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="robot_controllers" TARGET_NAME="wtf_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="robot_controllers" RUN_TARGET_NAME="wtf_client" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application._catkin_empty_exported_target" />
+      <item itemvalue="Application._robot_controllers_generate_messages_check_deps_TransitionAction" />
+      <item itemvalue="Application._robot_controllers_generate_messages_check_deps_TransitionActionFeedback" />
+      <item itemvalue="Application._robot_controllers_generate_messages_check_deps_TransitionActionGoal" />
+      <item itemvalue="Application._robot_controllers_generate_messages_check_deps_TransitionActionResult" />
+      <item itemvalue="Application._robot_controllers_generate_messages_check_deps_TransitionFeedback" />
+      <item itemvalue="Application._robot_controllers_generate_messages_check_deps_TransitionGoal" />
+      <item itemvalue="Application._robot_controllers_generate_messages_check_deps_TransitionResult" />
+      <item itemvalue="Application.actionlib_generate_messages_cpp" />
+      <item itemvalue="Application.actionlib_generate_messages_eus" />
+      <item itemvalue="Application.actionlib_generate_messages_lisp" />
+      <item itemvalue="Application.actionlib_generate_messages_nodejs" />
+      <item itemvalue="Application.actionlib_generate_messages_py" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_eus" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_nodejs" />
+      <item itemvalue="Application.actionlib_msgs_generate_messages_py" />
+      <item itemvalue="Application.clean_test_results" />
+      <item itemvalue="Application.download_extra_data" />
+      <item itemvalue="Application.doxygen" />
+      <item itemvalue="Application.robot_controllers_gencpp" />
+      <item itemvalue="Application.robot_controllers_generate_messages" />
+      <item itemvalue="Application.robot_controllers_generate_messages_cpp" />
+      <item itemvalue="Application.robot_controllers_generate_messages_eus" />
+      <item itemvalue="Application.robot_controllers_generate_messages_lisp" />
+      <item itemvalue="Application.robot_controllers_generate_messages_nodejs" />
+      <item itemvalue="Application.robot_controllers_generate_messages_py" />
+      <item itemvalue="Application.robot_controllers_geneus" />
+      <item itemvalue="Application.robot_controllers_genlisp" />
+      <item itemvalue="Application.robot_controllers_gennodejs" />
+      <item itemvalue="Application.robot_controllers_genpy" />
+      <item itemvalue="Application.roscpp_generate_messages_cpp" />
+      <item itemvalue="Application.roscpp_generate_messages_eus" />
+      <item itemvalue="Application.roscpp_generate_messages_lisp" />
+      <item itemvalue="Application.roscpp_generate_messages_nodejs" />
+      <item itemvalue="Application.roscpp_generate_messages_py" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_eus" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_nodejs" />
+      <item itemvalue="Application.rosgraph_msgs_generate_messages_py" />
+      <item itemvalue="Application.run_tests" />
+      <item itemvalue="Application.std_msgs_generate_messages_cpp" />
+      <item itemvalue="Application.std_msgs_generate_messages_eus" />
+      <item itemvalue="Application.std_msgs_generate_messages_lisp" />
+      <item itemvalue="Application.std_msgs_generate_messages_nodejs" />
+      <item itemvalue="Application.std_msgs_generate_messages_py" />
+      <item itemvalue="Application.tests" />
+      <item itemvalue="Application.transition_client" />
+      <item itemvalue="Application.transition_controller" />
+      <item itemvalue="Application.wtf_client" />
+      <item itemvalue="Application.gmock" />
+      <item itemvalue="Application.gmock_main" />
+      <item itemvalue="Application.gtest" />
+      <item itemvalue="Application.gtest_main" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a1d1def-daa0-4cd2-93a1-136db8973799" name="Default" comment="" />
+      <created>1523294508060</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523294508060</updated>
+      <workItem from="1523294509371" duration="2106000" />
+      <workItem from="1523296633773" duration="7000" />
+      <workItem from="1523296684443" duration="6774000" />
+      <workItem from="1523309675852" duration="1029000" />
+      <workItem from="1523387879142" duration="120000" />
+      <workItem from="1523548391882" duration="381000" />
+      <workItem from="1523549314705" duration="1749000" />
+      <workItem from="1523634001600" duration="8640000" />
+      <workItem from="1523644432817" duration="846000" />
+      <workItem from="1523650010013" duration="5473000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="27125000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25272927" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.34698275" />
+      <window_info anchor="bottom" id="CMake" order="7" weight="0.32991803" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3297414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24030173" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="41" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="41" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/actionlib/server/action_server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2205">
+          <caret line="147" column="57" selection-start-line="147" selection-start-column="57" selection-end-line="147" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="15" lean-forward="true" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake/robot_controllers-genmsg.cmake" />
+    <entry file="file://$PROJECT_DIR$/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../devel/include/robot_controllers/TransitionAction.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="280" lean-forward="true" selection-start-line="280" selection-end-line="280" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/actionlib/server/simple_action_server_imp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="273" column="37" selection-start-line="273" selection-start-column="37" selection-end-line="273" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/actionlib_msgs/GoalStatus.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/actionlib/server/action_server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="147" column="57" selection-start-line="147" selection-start-column="57" selection-end-line="147" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/action/Transition.action">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/include/actionlib/server/simple_action_server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="63" column="75" selection-start-line="63" selection-start-column="75" selection-end-line="63" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/wtf_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="47" selection-start-column="9" selection-end-line="3" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionController/transition_controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="97" column="32" lean-forward="true" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+          <folding>
+            <element signature="e#43#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

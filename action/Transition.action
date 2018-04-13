@@ -1,0 +1,8 @@
+#goal definition
+string[] names
+float32[] positions
+---
+#result definition
+---
+#feedback
+int16 percentage
