@@ -5,4 +5,4 @@ float32[] positions
 #result definition
 ---
 #feedback
-int16 percentage
+float32 percentage
