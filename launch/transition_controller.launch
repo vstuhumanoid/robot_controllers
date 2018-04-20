@@ -1,0 +1,4 @@
+<launch>
+    <param name="speed" value="0.2"/>
+    <node name="transition_controller" pkg="robot_controllers" type="transition_controller" output="screen"/>
+</launch>

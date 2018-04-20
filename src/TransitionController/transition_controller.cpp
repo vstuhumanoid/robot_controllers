@@ -8,6 +8,7 @@
 #include <sensor_msgs/JointState.h>
 #include <robot_controller_ros/JointsCommand.h>
 #include <robot_controller_ros/JointsMode.h>
+#include <robot_controller_ros/JointsParams.h>
 
 #include <string>
 #include <mutex>
@@ -24,7 +25,7 @@ public:
     TransitionActionServer(ros::NodeHandle& nh, string server_name) :
     as_(nh, server_name, boost::bind(&TransitionActionServer::execute_cb, this, _1), false)
     {
-        jointsModePublisher = nh.advertise<JointsMode>("joints/set_mode", 100, true);
+        jointsModePublisher = nh.advertise<JointsMode>("joints/set_mode", 100);
         jointsCommandPublisher = nh.advertise<JointsCommand>("joints/commands", 1000);
 
         as_.registerPreemptCallback(boost::bind(&TransitionActionServer::preemptCB, this));
@@ -51,13 +52,17 @@ public:
             double start_angle;
 
             bool isExist = false;
-            for(int  j = 0; j < state.name.size(); j++)
+            bool isEnabled = true;
+            for(int  j = 0; j < jointState.name.size(); j++)
             {
-                if(state.name[j] == goal->names[i])
+                if(jointState.name[j] == goal->names[i])
                 {
-                    start_angle = state.position[j];
+                    start_angle = jointState.position[j];
                     isExist = true;
                 }
+
+                //if(jointsParams.names[j] == goal->names[i])
+                //    isEnabled = jointsParams.enabled[j];
             }
 
             if(!isExist)
@@ -71,9 +76,8 @@ public:
 
             diff_angle = dest_angle - start_angle;
 
-
-
-            max_diff = (abs(diff_angle) > max_diff ) ? abs(diff_angle) : max_diff;
+            if(isEnabled)
+                max_diff = (abs(diff_angle) > max_diff ) ? abs(diff_angle) : max_diff;
 
             transition_data[i].name = goal->names[i];
             transition_data[i].start_angle = start_angle;
@@ -82,7 +86,7 @@ public:
             //ROS_INFO_STREAM("diff angle for " << transition_data[i].name << " : " << diff_angle);
         }
 
-        transition_time = max_diff / speed;
+        transition_time = max_diff / transition_speed;
         transition_time = transition_time < 5 ? 5 : transition_time;
 
         jointsMode.names.resize(size);
@@ -90,7 +94,6 @@ public:
 
         jointsCommand.names.resize(size);
         jointsCommand.positions.resize(size);
-        //jointsCommand.pids.resize(size);
 
         //ROS_INFO_STREAM("transition time: " << transition_time << "sec");
 
@@ -103,8 +106,6 @@ public:
             transition_data[i].step = diff_angle / (transition_time * EXECUTE_RATE);
             transition_data[i].current_angle = transition_data[i].start_angle;
             transition_data[i].is_end_angle = false;
-            //jointsMode.names.push_back(transition_data[i].name);
-            //jointsMode.modes.push_back(mode);
             jointsMode.names[i] = transition_data[i].name;
             jointsMode.modes[i] = mode;
 
@@ -235,8 +236,20 @@ public:
     void joints_state_cb(const sensor_msgs::JointStateConstPtr &msg)
     {
         locker.lock();
-        state = *msg;
+        jointState = *msg;
         locker.unlock();
+    }
+
+    void joints_params_cb(const JointsParamsConstPtr &msg)
+    {
+        locker.lock();
+        jointsParams = *msg;
+        locker.unlock();
+    }
+
+    void setSpeed(double speed)
+    {
+        transition_speed = speed;
     }
 
 protected:
@@ -255,7 +268,8 @@ protected:
 
     int joints_in_transition_count = 0;
 
-    sensor_msgs::JointState state;
+    sensor_msgs::JointState jointState;
+    JointsParams jointsParams;
     mutex locker;
     JointsCommand jointsCommand;
     JointsMode jointsMode;
@@ -268,7 +282,7 @@ protected:
     ros::Publisher jointsModePublisher;
 
     //TODO: задавать через ros_param
-    double speed = 0.2;      // скорость перехода
+    double transition_speed = 0.2;      // скорость перехода
     double transition_time;
 };
 
@@ -279,9 +293,15 @@ int main(int argc, char** argv)
     ros::init(argc, argv, "transition_controller");
     ROS_INFO("i am started...");
     ros::NodeHandle nh;
+
     TransitionActionServer action(nh, ros::this_node::getName());
 
-    ros::Subscriber subscriber = nh.subscribe("joints/state", 1000, &TransitionActionServer::joints_state_cb, &action);
+    double speed;
+    if(nh.getParam("speed", speed))
+        action.setSpeed(speed);
+
+    ros::Subscriber stateSubscriber = nh.subscribe("joints/state", 1000, &TransitionActionServer::joints_state_cb, &action);
+    ros::Subscriber paramsSubscriber = nh.subscribe("joints/get_params", 100, &TransitionActionServer::joints_params_cb, &action);
 
     ros::spin();
     return 0;
