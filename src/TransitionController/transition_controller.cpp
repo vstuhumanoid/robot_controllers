@@ -16,8 +16,7 @@ using namespace std;
 using namespace robot_controllers;
 using namespace robot_controller_ros;
 
-#define EXECUTE_RATE 100
-#define CANCEL_ON_NEW
+#define EXECUTE_RATE 100  //100
 
 class TransitionActionServer
 {
@@ -80,7 +79,7 @@ public:
             transition_data[i].start_angle = start_angle;
             transition_data[i].dest_angle = dest_angle;
 
-            ROS_INFO_STREAM("diff angle for " << transition_data[i].name << " : " << diff_angle);
+            //ROS_INFO_STREAM("diff angle for " << transition_data[i].name << " : " << diff_angle);
         }
 
         transition_time = max_diff / speed;
@@ -89,7 +88,11 @@ public:
         jointsMode.names.resize(size);
         jointsMode.modes.resize(size);
 
-        ROS_INFO_STREAM("transition time: " << transition_time << "sec");
+        jointsCommand.names.resize(size);
+        jointsCommand.positions.resize(size);
+        //jointsCommand.pids.resize(size);
+
+        //ROS_INFO_STREAM("transition time: " << transition_time << "sec");
 
         TypeJointMode mode;
         mode.mode = TypeJointMode::TRACE;
@@ -119,55 +122,44 @@ public:
 
     void execute_transition_step()
     {
-        jointsCommand.names.clear();
-        jointsCommand.positions.clear();
-        jointsCommand.pids.clear();
-        //jointsMode.names.clear();
-        //jointsMode.modes.clear();
-
         TypeJointMode mode;
         mode.mode = TypeJointMode::BREAK;
 
-        int i =0;
-        for(auto transition = transition_data.begin(); transition != transition_data.end(); ++transition, i++)
-        //for(auto transition: transition_data)
+        int i = 0;
+
+        for(auto& transition: transition_data)
         {
-            bool is_first = (*transition).second.dest_angle <= (*transition).second.current_angle
-                           && (*transition).second.dest_angle >= (*transition).second.start_angle;
-            bool is_second = (*transition).second.dest_angle >= (*transition).second.current_angle
-                            && (*transition).second.dest_angle <= (*transition).second.start_angle;
+            bool is_first = transition.second.dest_angle <= transition.second.current_angle
+                           && transition.second.dest_angle >= transition.second.start_angle;
+            bool is_second = transition.second.dest_angle >= transition.second.current_angle
+                            && transition.second.dest_angle <= transition.second.start_angle;
 
             if(is_first || is_second)
             {
-                ROS_INFO_STREAM("is first and is second true");
-                jointsCommand.names.push_back((*transition).second.name);
-                jointsCommand.positions.push_back((*transition).second.dest_angle);
+                jointsCommand.names[i] = transition.second.name;
+                jointsCommand.positions[i] = transition.second.dest_angle;
 
-                /*jointsMode.names.push_back((*transition).second.name);
-                jointsMode.modes.push_back(mode);*/
-                jointsMode.names[i] = (*transition).second.name;
+                jointsMode.names[i] = transition.second.name;
                 jointsMode.modes[i] = mode;
 
-                ROS_INFO_STREAM("break for " << (*transition).second.name);
-
-                if(!(*transition).second.is_end_angle)
+                if(!transition.second.is_end_angle)
                 {
                     joints_in_transition_count--;
-                    (*transition).second.is_end_angle = true;
+                    transition.second.is_end_angle = true;
                 }
             }
             else
             {
-                //ROS_INFO_STREAM("is first and is second false");
-                jointsCommand.names.push_back((*transition).second.name);
-                jointsCommand.positions.push_back((*transition).second.current_angle);
-
-                (*transition).second.current_angle += (*transition).second.step;
-                //ROS_INFO_STREAM("current angle = " << ((*transition).second.current_angle + (*transition).second.step));
+                jointsCommand.names[i] = transition.second.name;
+                jointsCommand.positions[i] = transition.second.current_angle;
+                transition.second.current_angle += transition.second.step;
+                //ROS_INFO_STREAM("Position for " << transition.second.name << ": " << transition.second.current_angle);
             }
-            //ROS_INFO_STREAM("transition position for " << (*transition).second.name << ": " << (*transition).second.current_angle);
+
+            i++;
         }
 
+        jointsCommand.header.stamp = ros::Time::now();
         jointsCommandPublisher.publish(jointsCommand);
         jointsModePublisher.publish(jointsMode);    //что если пустое?
     }
@@ -225,7 +217,7 @@ public:
             feedback_.percentage = percentage;
             as_.publishFeedback(feedback_);
             rate.sleep();
-            counter += 1/EXECUTE_RATE;
+            counter += 1 / EXECUTE_RATE;
         }
 
         // Готово
@@ -245,7 +237,6 @@ public:
         locker.lock();
         state = *msg;
         locker.unlock();
-        //ROS_INFO("I heard: [%s]", msg->name.size());
     }
 
 protected:
