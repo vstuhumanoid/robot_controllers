@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8.3)
 project(robot_controllers)
 
 
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 add_compile_options(-std=c++14)
 
 find_package(catkin REQUIRED COMPONENTS
@@ -11,19 +13,6 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
 )
 
-
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
-
-## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
 
 ## Generate actions in the 'action' folder
  add_action_files(
@@ -48,28 +37,6 @@ catkin_package(
 ## Build ##
 ###########
 
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)
+include_directories(${catkin_INCLUDE_DIRS})
 
-add_executable(transition_controller src/TransitionController/transition_controller.cpp)
-
-target_link_libraries(transition_controller
-        ${catkin_LIBRARIES}
-)
-
-add_executable(transition_client src/TransitionController/transition_client.cpp)
-
-target_link_libraries(transition_client
-		${catkin_LIBRARIES}
-		)
-
-add_executable(wtf_client src/TransitionController/wtf_client.cpp)
-
-target_link_libraries(wtf_client
-		${catkin_LIBRARIES}
-		)
-
+add_subdirectory(src/TransitionController)
