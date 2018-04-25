@@ -1,0 +1,62 @@
+//
+// Created by skorikov on 25.04.18.
+//
+
+#ifndef ROBOT_CONTROLLERS_FRUNDMODELACTIONSERVER_H
+#define ROBOT_CONTROLLERS_FRUNDMODELACTIONSERVER_H
+
+#include <ros/ros.h>
+#include <actionlib/server/simple_action_server.h>
+#include <robot_controllers/FrundModelAction.h>
+#include <actionlib/client/simple_action_client.h>
+#include <robot_controllers/TransitionAction.h>
+#include <sensor_msgs/JointState.h>
+#include <robot_msgs/JointsCommand.h>
+#include <robot_msgs/JointsMode.h>
+#include <robot_msgs/JointsParams.h>
+#include <robot_controllers/MotionParams.h>
+
+#include <string>
+#include <mutex>
+
+
+class FrundModelActionServer
+{
+public:
+
+    FrundModelActionServer(ros::NodeHandle& nh, std::string server_name);
+
+private:
+
+    bool initializeGoal(robot_controllers::FrundModelGoalConstPtr goal);
+    void execute_transition();
+    void execute_cb(const robot_controllers::FrundModelGoalConstPtr &goal);
+    //void preemptCB();
+    void joints_state_cb(const sensor_msgs::JointStateConstPtr &msg);
+    void joints_params_cb(const robot_msgs::JointsParamsConstPtr &msg);
+    void motion_params_cb(const robot_controllers::MotionParamsConstPtr &msg);
+
+    sensor_msgs::JointState jointState_;
+    robot_msgs::JointsParams jointsParams_;
+    robot_msgs::JointsCommand jointsCommand_;
+    robot_msgs::JointsMode jointsMode_;
+
+    std::mutex locker_;
+
+    ros::NodeHandle& nh_;
+
+    actionlib::SimpleActionServer<robot_controllers::FrundModelAction> as_;
+    robot_controllers::FrundModelResult result_;
+    robot_controllers::FrundModelFeedback feedback_;
+
+    actionlib::SimpleActionClient<robot_controllers::TransitionAction> ac_;
+
+    ros::Publisher joints_command_publisher_;
+    ros::Publisher joints_mode_publisher_;
+    ros::Subscriber state_subscriber_;
+    ros::Subscriber params_subscriber_;
+    ros::Subscriber motion_params_subscriber_;
+};
+
+
+#endif //ROBOT_CONTROLLERS_FRUNDMODELACTIONSERVER_H

@@ -14,7 +14,6 @@ find_package(catkin REQUIRED COMPONENTS
 		message_generation
 )
 
-
 add_message_files(
 		FILES
 		MotionParams.msg
@@ -47,3 +46,4 @@ catkin_package(
 include_directories(${catkin_INCLUDE_DIRS})
 
 add_subdirectory(src/TransitionController)
+add_subdirectory(src/FrundController)

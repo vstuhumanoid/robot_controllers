@@ -28,7 +28,7 @@ private:
     bool initializeGoal(robot_controllers::TransitionGoalConstPtr goal);
     void execute_transition_step();
     void execute_cb(const robot_controllers::TransitionGoalConstPtr &goal);
-    void preemptCB();
+    //void preemptCB();
     void joints_state_cb(const sensor_msgs::JointStateConstPtr &msg);
     void joints_params_cb(const robot_msgs::JointsParamsConstPtr &msg);
 
