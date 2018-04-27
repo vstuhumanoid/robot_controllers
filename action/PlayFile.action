@@ -1,0 +1,7 @@
+#goal definition
+string filename
+---
+#result definition
+---
+#feedback
+float32 percentage

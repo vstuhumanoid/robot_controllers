@@ -1,0 +1,29 @@
+<launch>
+    <rosparam param="map_number_to_name">
+     {  ankle_s_joint_right : 1,
+        ankle_f_joint_right : 2,
+        knee_joint_right : 3,
+        hip_f_joint_right : 4,
+        hip_s_joint_right : 5,
+        hip_r_joint_right : 6,
+        ankle_s_joint_left : 7,
+        ankle_f_joint_left : 8,
+        knee_joint_left : 9,
+        hip_f_joint_left : 10,
+        hip_s_joint_left : 11,
+        hip_r_joint_left : 12,
+        shoulder_s_joint_right : 19,
+        shoulder_f_joint_right : 20,
+        shoulder_s_joint_left : 35,
+        shoulder_f_joint_left : 36,
+        head_r_joint : 43,
+        head_f_joint : 44,
+        head_s_joint : 45,
+        neck_f_joint : 46,
+        torso_r_joint : 47 }
+     </rosparam>
+
+    <rosparam param="hardware">
+    [ { name: 'hw1', param1: 1.3, param2: false }, { name: 'hw2', param1: 1.7, param2: true  }, { name: 'hw3', param1: -1.3, param2: true  } ]
+    </rosparam>
+</launch>

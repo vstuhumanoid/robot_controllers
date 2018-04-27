@@ -1,0 +1,3 @@
+<launch>
+    <node name="frund_controller" pkg="robot_controllers" type="frund_controller" output="screen"/>
+</launch>

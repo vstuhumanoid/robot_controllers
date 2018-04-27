@@ -4,7 +4,7 @@ project(robot_controllers)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_compile_options(-std=c++14)
+set (CMAKE_CXX_STANDARD 14)
 
 find_package(catkin REQUIRED COMPONENTS
 		#actionlib_msgs
@@ -21,9 +21,10 @@ add_message_files(
 
 ## Generate actions in the 'action' folder
 add_action_files(
-		 FILES
-		 Transition.action
-		 FrundModel.action
+		FILES
+		Transition.action
+		FrundModel.action
+		PlayFile.action
 )
 
 ## Generate added messages and services with any dependencies listed here
@@ -47,3 +48,5 @@ include_directories(${catkin_INCLUDE_DIRS})
 
 add_subdirectory(src/TransitionController)
 add_subdirectory(src/FrundController)
+add_subdirectory(src/PlayFileController)
+add_subdirectory(src/JointNameConverter)

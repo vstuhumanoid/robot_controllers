@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find robot_controllers)/launch/joint_name_converter.launch"/>
+    <include file="$(find robot_controllers)/launch/transition_controller.launch"/>
+    <include file="$(find robot_controllers)/launch/frund_controller.launch"/>
+    <include file="$(find robot_controllers)/launch/play_file_controller.launch"/>
+</launch>
