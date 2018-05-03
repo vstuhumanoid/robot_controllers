@@ -1,6 +1,7 @@
 add_executable(frund_controller
         frund_controller.cpp
-        FrundModelActionServer/FrundModelActionServer.cpp)
+        FrundModelActionServer/FrundModelActionServer.cpp
+        FrundPacketConverter/FrundPacketConverter.cpp)
 
 add_dependencies(frund_controller robot_controllers_generate_messages_cpp)
 

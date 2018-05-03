@@ -10,17 +10,11 @@ void JointNameConverter::init()
 {
     // чтение настроек, будет выполнено один раз при первом вызове
     ros::NodeHandle h;
-    map<string, int> map_, map2;
-    map_["a"] = 1;
-    map_["b"] = 2;
-    h.setParam("map_a_to_b", map_);
-    h.getParam("map_a_to_b", map2);
-
-    string mappppp;
-    if(!h.getParam("map_number_to_name", map_))
+    map<string, int> map;
+    if(!h.getParam("map_number_to_name", map))
         ROS_ERROR("cant get param");
 
-    for(auto it : map_)
+    for(auto it : map)
     {
         numberToName[it.second] = it.first;
         nameToNumber[it.first] = it.second;
