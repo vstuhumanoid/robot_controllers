@@ -1,7 +1,10 @@
+find_package(Qt5Core REQUIRED)
+
 add_executable(frund_controller
         frund_controller.cpp
         FrundModelActionServer/FrundModelActionServer.cpp
-        FrundPacketConverter/FrundPacketConverter.cpp)
+        FrundPacketConverter/FrundPacketConverter.cpp
+        FrundGateway/FrundGateway.cpp)
 
 add_dependencies(frund_controller robot_controllers_generate_messages_cpp)
 
@@ -9,8 +12,4 @@ target_link_libraries(frund_controller
         ${catkin_LIBRARIES}
         joint_name_converter)
 
-
-#add_executable(transition_client transition_client.cpp)
-
-#target_link_libraries(transition_client
-#        ${catkin_LIBRARIES})
+qt5_use_modules(frund_controller Core Network)

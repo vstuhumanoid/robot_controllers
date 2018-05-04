@@ -5,6 +5,9 @@
 #ifndef ROBOT_CONTROLLERS_FRUND_PACKET_CONVERTER_H
 #define ROBOT_CONTROLLERS_FRUND_PACKET_CONVERTER_H
 
+#define KDRIVE 21
+#define SIZEDRIVE 72 // 8*9
+
 #include <string>
 #include <tuple>
 #include "robot_msgs/JointsCommand.h"
@@ -21,9 +24,9 @@ class FrundPacketConverter
 private:
     JointNameConverter jointConverter;
 public:
-    robot_msgs::JointsCommand getMessage(uint8_t *array, int size);
+    robot_msgs::JointsCommand getMessage(char *array);
     void getArray(sensor_msgs::JointState joints, sensor_msgs::Imu imu, robot_msgs::FeetSensors feet,
-                  robot_msgs::JointsSupplyState jointsSupply, uint8_t *array);
+                  robot_msgs::JointsSupplyState jointsSupply, char *array);
 };
 
 

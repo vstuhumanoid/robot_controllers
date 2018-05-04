@@ -7,26 +7,26 @@ using namespace robot_msgs;
 using namespace sensor_msgs;
 using namespace std;
 
-robot_msgs::JointsCommand FrundPacketConverter::getMessage(uint8_t *array, int size)
+robot_msgs::JointsCommand FrundPacketConverter::getMessage(char *array)
 {
     JointsCommand joints;
-    joints.names.resize(21);
-    joints.positions.resize(21);
-    joints.pids.resize(21);
+    joints.names.resize(KDRIVE);
+    joints.positions.resize(KDRIVE);
+    joints.pids.resize(KDRIVE);
 
-    for(int i = 0; i < 21 * 72; i += 72)
+    for(int i = 0; i < KDRIVE * SIZEDRIVE; i += SIZEDRIVE)
     {
         string name;
         double number;
         memcpy(&number, array + i, sizeof(double));
         if(jointConverter.getName((int)number, name))
         {
-            joints.names[i / 72] = name;
+            joints.names[i / SIZEDRIVE] = name;
 
-            memcpy(&joints.positions[i / 72], array + i + 16, sizeof(double));
-            memcpy(&joints.pids[i / 72].p, array + i + 24, sizeof(double));
-            memcpy(&joints.pids[i / 72].i, array + i + 32, sizeof(double));
-            memcpy(&joints.pids[i / 72].d, array + i + 40, sizeof(double));
+            memcpy(&joints.positions[i / SIZEDRIVE], array + i + 16, sizeof(double));
+            memcpy(&joints.pids[i / SIZEDRIVE].p, array + i + 24, sizeof(double));
+            memcpy(&joints.pids[i / SIZEDRIVE].i, array + i + 32, sizeof(double));
+            memcpy(&joints.pids[i / SIZEDRIVE].d, array + i + 40, sizeof(double));
         }
     }
 
@@ -34,7 +34,7 @@ robot_msgs::JointsCommand FrundPacketConverter::getMessage(uint8_t *array, int s
 }
 
 void FrundPacketConverter::getArray(sensor_msgs::JointState joints, sensor_msgs::Imu imu, robot_msgs::FeetSensors feet,
-                                    robot_msgs::JointsSupplyState jointsSupply, uint8_t *array)
+                                    robot_msgs::JointsSupplyState jointsSupply, char *array)
 {
     int sizeOfData = joints.name.size() + 6 + 8;
     std::map<int, std::tuple<double, double>> jointsMap;
