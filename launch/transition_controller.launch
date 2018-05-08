@@ -1,5 +1,4 @@
 <launch>
     <param name="transition_speed" value="5"/>
-    <param name="execute_rate" value="100"/>
     <node name="transition_controller" pkg="robot_controllers" type="transition_controller" output="screen"/>
 </launch>

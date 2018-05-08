@@ -13,3 +13,11 @@ target_link_libraries(frund_controller
         joint_name_converter)
 
 qt5_use_modules(frund_controller Core Network)
+
+
+
+add_executable(frund_client frund_client.cpp)
+
+add_dependencies(frund_client robot_controllers_generate_messages_cpp)
+
+target_link_libraries(frund_client ${catkin_LIBRARIES})

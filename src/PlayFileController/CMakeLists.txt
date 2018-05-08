@@ -10,5 +10,7 @@ target_link_libraries(play_file_controller
 
 add_executable(play_file_client play_file_client.cpp)
 
+add_dependencies(play_file_client robot_controllers_generate_messages_cpp)
+
 target_link_libraries(play_file_client
         ${catkin_LIBRARIES})

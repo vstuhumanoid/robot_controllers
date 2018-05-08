@@ -9,5 +9,7 @@ target_link_libraries(transition_controller
 
 add_executable(transition_client transition_client.cpp)
 
+add_dependencies(transition_client robot_controllers_generate_messages_cpp)
+
 target_link_libraries(transition_client
         ${catkin_LIBRARIES})

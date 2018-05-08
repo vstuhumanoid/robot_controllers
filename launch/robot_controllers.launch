@@ -1,4 +1,5 @@
 <launch>
+    <param name="execute_rate" value="200"/>
     <include file="$(find robot_controllers)/launch/joint_name_converter.launch"/>
     <include file="$(find robot_controllers)/launch/transition_controller.launch"/>
     <include file="$(find robot_controllers)/launch/frund_controller.launch"/>

@@ -1,6 +1,6 @@
 <launch>
     <param name="frund_port" value="55556" />
-    <param name="frund_runner_address" value="192.168.1.13" />
+    <param name="frund_runner_address" value="192.168.1.140" />
     <param name="frund_runner_port" value="55557" />
     <node name="frund_controller" pkg="robot_controllers" type="frund_controller" output="screen"/>
 </launch>

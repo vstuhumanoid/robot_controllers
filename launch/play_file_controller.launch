@@ -1,4 +1,3 @@
 <launch>
-    <param name="execute_rate" value="100"/>
     <node name="play_file_controller" pkg="robot_controllers" type="play_file_controller" output="screen"/>
 </launch>
