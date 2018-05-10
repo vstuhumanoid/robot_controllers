@@ -10,23 +10,35 @@ using namespace std;
 robot_msgs::JointsCommand FrundPacketConverter::getMessage(char *array)
 {
     JointsCommand joints;
-    joints.names.resize(KDRIVE);
-    joints.positions.resize(KDRIVE);
-    joints.pids.resize(KDRIVE);
+    TypePid pid;
+    //joints.names.resize(KDRIVE);
+    //joints.positions.resize(KDRIVE);
+    //joints.pids.resize(KDRIVE);
 
     for(int i = 0; i < KDRIVE * SIZEDRIVE; i += SIZEDRIVE)
     {
+        int j = i / SIZEDRIVE;
         string name;
-        double number;
+        double number, position, pid_p, pid_i, pid_d;
         memcpy(&number, array + i, sizeof(double));
         if(jointConverter.getName((int)number, name))
         {
-            joints.names[i / SIZEDRIVE] = name;
+            joints.names.push_back(name);
 
-            memcpy(&joints.positions[i / SIZEDRIVE], array + i + 16, sizeof(double));
-            memcpy(&joints.pids[i / SIZEDRIVE].p, array + i + 24, sizeof(double));
-            memcpy(&joints.pids[i / SIZEDRIVE].i, array + i + 32, sizeof(double));
-            memcpy(&joints.pids[i / SIZEDRIVE].d, array + i + 40, sizeof(double));
+            memcpy(&position, array + i + 16, sizeof(double));
+            joints.positions.push_back((float)position);
+            memcpy(&pid_p, array + i + 24, sizeof(double));
+            pid.p = (float)pid_p;
+            memcpy(&pid_i, array + i + 32, sizeof(double));
+            pid.i = (float)pid_i;
+            memcpy(&pid_d, array + i + 40, sizeof(double));
+            pid.d = (float)pid_d;
+            joints.pids.push_back(pid);
+
+            //memcpy(&joints.positions[i / SIZEDRIVE], array + i + 16, sizeof(double));
+            //memcpy(&joints.pids[i / SIZEDRIVE].p, array + i + 24, sizeof(double));
+            //memcpy(&joints.pids[i / SIZEDRIVE].i, array + i + 32, sizeof(double));
+            //memcpy(&joints.pids[i / SIZEDRIVE].d, array + i + 40, sizeof(double));
         }
     }
 
@@ -36,7 +48,7 @@ robot_msgs::JointsCommand FrundPacketConverter::getMessage(char *array)
 void FrundPacketConverter::getArray(sensor_msgs::JointState joints, sensor_msgs::Imu imu, robot_msgs::FeetSensors feet,
                                     robot_msgs::JointsSupplyState jointsSupply, char *array)
 {
-    int sizeOfData = joints.name.size() + 6 + 8;
+    int sizeOfData = joints.name.size() + 6 + 8 + 1 + jointsSupply.states.size();
     std::map<int, std::tuple<double, double>> jointsMap;
 
     double data[sizeOfData];

@@ -14,7 +14,7 @@ void send(actionlib::SimpleActionClient<FrundModelAction>& ac, string goal_model
     ROS_INFO("Sending goal...");
     ac.sendGoal(goal);
 
-    bool is_ok = ac.waitForResult(ros::Duration(20));
+    bool is_ok = ac.waitForResult(); //ros::Duration(20));
     if(is_ok)
     {
         auto state = ac.getState();

@@ -11,12 +11,12 @@ int main(int argc, char** argv)
     ROS_INFO("i am started...");
     ros::NodeHandle nh;
 
-    int execute_rate;
-    if(!nh.getParam("execute_rate", execute_rate))
+    int execute_rate = 200;
+    /*if(!nh.getParam("execute_rate", execute_rate))
     {
         ROS_ERROR("Required param \"execute_rate\" not set");
         return -1;
-    }
+    }*/
 
     FrundModelActionServer action_server(nh, ros::this_node::getName(), execute_rate);
 

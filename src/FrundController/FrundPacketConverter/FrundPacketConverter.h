@@ -6,7 +6,7 @@
 #define ROBOT_CONTROLLERS_FRUND_PACKET_CONVERTER_H
 
 #define KDRIVE 21
-#define SIZEDRIVE 72 // 8*9
+#define SIZEDRIVE 72 // 9*8
 
 #include <string>
 #include <tuple>

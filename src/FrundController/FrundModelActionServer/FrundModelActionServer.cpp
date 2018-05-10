@@ -16,15 +16,15 @@ FrundModelActionServer::FrundModelActionServer(ros::NodeHandle& nh, string serve
     transition_ac_("transition_controller", true),
     execute_rate_(execute_rate)
 {
-    int frund_port, frund_runner_port;
-    std::string frund_runner_address;
-    if(!nh_.getParam("frund_port", frund_port)
+    int frund_port = 55556, frund_runner_port = 55557;
+    std::string frund_runner_address = "192.168.1.11";
+    /*if(!nh_.getParam("frund_port", frund_port)
        || !nh_.getParam("frund_runner_address", frund_runner_address)
         || !nh_.getParam("frund_runner_port", frund_runner_port))
     {
         ROS_ERROR("Not enough params!");
         exit(1);
-    }
+    }*/
 
     if(!frundGateway_.init((uint16_t)frund_port, (uint16_t)frund_runner_port, frund_runner_address))
     {
@@ -70,7 +70,7 @@ void FrundModelActionServer::execute_cb(const FrundModelGoalConstPtr &goal)
 
 
     int state = 1;
-    char packet[PACKET_SIZE];
+    char packet[PACKET_SIZE] = { 0 };
     JointsCommand command;
     TypeJointMode mode;
     mode.mode = TypeJointMode::TRACE;
@@ -84,6 +84,7 @@ void FrundModelActionServer::execute_cb(const FrundModelGoalConstPtr &goal)
             // TODO: Начало следующей задачи
             // Текущая задача будет преврана и начата новая
             ROS_INFO("Goal preempted");
+            stop_work("Current goal cancelled");
             as_.setPreempted(result_, "New task received");
             return;
         }
@@ -92,8 +93,8 @@ void FrundModelActionServer::execute_cb(const FrundModelGoalConstPtr &goal)
             // Текущая задача была "вытеснена" (preempted) и нет новой - значит текущая задача просто прервана
             // Прерываем текущую задачу
             ROS_WARN("Current goal cancelled");
-            as_.setAborted(result_, "Cancelled");
             stop_work("Current goal cancelled");
+            as_.setAborted(result_, "Cancelled");
             return;
         }
 
@@ -178,6 +179,9 @@ void FrundModelActionServer::stop_work(string message)
 {
     ROS_INFO_STREAM("Stopping...    " + message);
     frundGateway_.StopModel();
+
+    /*char buffer[PACKET_SIZE];
+    frundGateway_.ReceivePacket(buffer, PACKET_SIZE);*/
 
     TypeJointMode mode;
     mode.mode = TypeJointMode::TRACE;

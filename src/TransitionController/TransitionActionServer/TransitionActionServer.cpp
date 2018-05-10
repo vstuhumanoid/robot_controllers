@@ -58,7 +58,7 @@ bool TransitionActionServer::initializeGoal(TransitionGoalConstPtr goal)
 
         if(!isExist)
         {
-            ROS_WARN_STREAM("name from goal doesn't match name in state");
+            ROS_WARN_STREAM("name from goal \"" + goal->names[i] + "\" doesn't match name in state");
             return false;
         }
 

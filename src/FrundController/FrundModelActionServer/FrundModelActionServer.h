@@ -30,9 +30,9 @@
 #include "FrundPacketConverter/FrundPacketConverter.h"
 #include "FrundGateway/FrundGateway.h"
 
-#include <std_msgs/Int32.h>
+//#include <std_msgs/Int32.h>
 
-#define PACKET_SIZE 300
+#define PACKET_SIZE 2400 // 300 * 8
 
 typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::JointState, sensor_msgs::Imu, robot_msgs::FeetSensors, robot_msgs::JointsSupplyState> MySyncPolicy;
 
