@@ -9,7 +9,7 @@ FrundGateway::FrundGateway()
 
 }
 
-bool FrundGateway::init(uint16_t frund_port, uint16_t frund_runner_port, std::string frund_runner_address)
+bool FrundGateway::Init(uint16_t frund_port, uint16_t frund_runner_port, std::string frund_runner_address)
 {
     port_data_ = frund_port;
     port_commands_ = frund_runner_port;
@@ -58,8 +58,10 @@ void FrundGateway::SendPacket(char *frund_packet, int packet_size)
 bool FrundGateway::RunModel(std::string model_name)
 {
     std::lock_guard<std::mutex> lock(locker_);
-    socket_commands_.writeDatagram("1", 2, address_commands_, port_commands_);
-    socket_commands_.writeDatagram(model_name.data(), model_name.size(), address_commands_, port_commands_);
+    sendToRunner("1", 1);
+    sendToRunner(model_name.data(), model_name.size());
+    //socket_commands_.writeDatagram("1", 2, address_commands_, port_commands_);
+    //socket_commands_.writeDatagram(model_name.data(), model_name.size(), address_commands_, port_commands_);
     sleep(1);
     if(!socket_commands_.hasPendingDatagrams())
         return false;
@@ -76,13 +78,24 @@ bool FrundGateway::RunModel(std::string model_name)
 void FrundGateway::StopModel()
 {
     std::lock_guard<std::mutex> lock(locker_);
-    socket_commands_.writeDatagram("2", 2, address_commands_, port_commands_);
+    //socket_commands_.writeDatagram("2", 2, address_commands_, port_commands_);
+    sendToRunner("2", 1);
 }
 
 void FrundGateway::SendParams(std::string model_name, std::string params)
 {
     std::lock_guard<std::mutex> lock(locker_);
-    socket_commands_.writeDatagram("3", 2, address_commands_, port_commands_);
-    socket_commands_.writeDatagram(model_name.data(), model_name.size(), address_commands_, port_commands_);
-    socket_commands_.writeDatagram(params.data(), params.size(), address_commands_, port_commands_);
+    //socket_commands_.writeDatagram("3", 2, address_commands_, port_commands_);
+    //socket_commands_.writeDatagram(model_name.data(), model_name.size(), address_commands_, port_commands_);
+    //socket_commands_.writeDatagram(params.data(), params.size(), address_commands_, port_commands_);
+    sendToRunner("3", 1);
+    sendToRunner(model_name.data(), model_name.size());
+    sendToRunner(params.data(), params.size());
+}
+
+void FrundGateway::sendToRunner(const char *buffer, const int size)
+{
+    char message[size + 2] = { 0 };
+    strcat(strcpy(message, buffer), "!");
+    socket_commands_.writeDatagram(message, size+2, address_commands_, port_commands_);
 }

@@ -26,7 +26,7 @@ FrundModelActionServer::FrundModelActionServer(ros::NodeHandle& nh, string serve
         exit(1);
     }*/
 
-    if(!frundGateway_.init((uint16_t)frund_port, (uint16_t)frund_runner_port, frund_runner_address))
+    if(!frundGateway_.Init((uint16_t) frund_port, (uint16_t) frund_runner_port, frund_runner_address))
     {
         ROS_ERROR("Connection init error!");
         exit(1);
@@ -42,6 +42,8 @@ FrundModelActionServer::FrundModelActionServer(ros::NodeHandle& nh, string serve
     imu_sub_ .subscribe(nh_, "/sensors/imu", 1000);
     feet_sensors_sub_.subscribe(nh_, "/sensors/feet", 1000);
     joint_supply_state_sub_.subscribe(nh_, "/power/joints_state", 100);
+
+    motionParams_.velocity_x = 0.015;
 
     sync_ = new Synchronizer<MySyncPolicy>(MySyncPolicy(10), joint_state_sub_, imu_sub_, feet_sensors_sub_, joint_supply_state_sub_);
     sync_->registerCallback(&FrundModelActionServer::robot_state_cb, this);
@@ -211,11 +213,13 @@ string FrundModelActionServer::motionParamsToString(MotionParams params)
 {
     //TODO: преобразовать параметры в строку
     string params_string;
-    params_string += "1 " + std::to_string(params.velocity_x) + " " + std::to_string(params.velocity_y) + " 1";
+    params_string += "1.0 " + std::to_string(params.velocity_x) + " 0 1"; // + std::to_string(params.velocity_y); // + " 1";
     params_string += "\r\n" + std::to_string(params.step_height);
     params_string += "\r\n" + std::to_string(params.step_length);
     params_string += "\r\n" + std::to_string(params.com_height);
     params_string += "\r\n" + std::to_string(params.angular_velocity);
+    for(int i = 0; i < 19; i++)
+        params_string += "\r\n0";
     return params_string;
 }
 

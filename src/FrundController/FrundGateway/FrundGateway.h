@@ -13,7 +13,7 @@ class FrundGateway
 {
 public:
     FrundGateway();
-    bool init(uint16_t frund_port, uint16_t frund_runner_port, std::string frund_runner_address);
+    bool Init(uint16_t frund_port, uint16_t frund_runner_port, std::string frund_runner_address);
     ~FrundGateway();
     bool ReceivePacket(char* frund_packet, int packet_size);
     void SendPacket(char* frund_packet, int packet_size);
@@ -31,6 +31,8 @@ private:
     QHostAddress address_commands_;
 
     std::mutex locker_;
+
+    void sendToRunner(const char *buffer, const int size);
 };
 
 
