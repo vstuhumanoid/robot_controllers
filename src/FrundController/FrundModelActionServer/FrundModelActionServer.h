@@ -53,6 +53,7 @@ private:
                         const robot_msgs::FeetSensorsConstPtr &feet, const robot_msgs::JointsSupplyStateConstPtr &supply);
 
     std::string motionParamsToString(robot_controllers::MotionParams params);
+    void sendParams(std::string model);
     void stop_work(std::string message);
 
     sensor_msgs::JointState jointState_;
@@ -62,8 +63,9 @@ private:
     robot_msgs::JointsSupplyState jointsSupplyState_;
     sensor_msgs::Imu imu_;
     robot_msgs::FeetSensors feetSensors_;
+    robot_controllers::MotionParams motionParams_;
 
-    std::mutex locker_;
+    std::mutex locker_, lockerParams_;
     const int execute_rate_;
 
     ros::NodeHandle& nh_;

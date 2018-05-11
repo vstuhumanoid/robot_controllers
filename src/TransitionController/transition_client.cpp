@@ -83,10 +83,19 @@ int main(int argc, char** argv)
     float goal_angle = 0;
     while(ros::ok())
     {
+        string goal;
         //send(ac, task_count, wait);
         cout << "Enter goal: ";
-        cin >> goal_angle;
-        send(ac, goal_angle);
+        cin >> goal;
+        try
+        {
+            goal_angle = stof(goal, nullptr);
+            send(ac, goal_angle);
+        }
+        catch (exception e)
+        {
+            cout << "Invalid goal - " << e.what() << endl;
+        }
     }
 
     return 0;

@@ -50,6 +50,7 @@ FrundModelActionServer::FrundModelActionServer(ros::NodeHandle& nh, string serve
 
 bool FrundModelActionServer::initializeGoal(FrundModelGoalConstPtr goal)
 {
+    sendParams(goal->model);
     if(!frundGateway_.RunModel(goal->model))
         return false;
     current_model_ = goal->model;
@@ -200,8 +201,10 @@ void FrundModelActionServer::joints_params_cb(const robot_msgs::JointsParamsCons
 
 void FrundModelActionServer::motion_params_cb(const robot_controllers::MotionParamsConstPtr &msg)
 {
-    MotionParams motionParams = *msg;
-    frundGateway_.SendParams(current_model_, motionParamsToString(motionParams));
+    lockerParams_.lock();
+    motionParams_ = *msg;
+    lockerParams_.unlock();
+    sendParams(current_model_);
 }
 
 string FrundModelActionServer::motionParamsToString(MotionParams params)
@@ -226,4 +229,10 @@ void FrundModelActionServer::robot_state_cb(const sensor_msgs::JointStateConstPt
     imu_ = *imu;
     feetSensors_ = *feet;
     jointsSupplyState_ = *supply;
+}
+
+void FrundModelActionServer::sendParams(string model)
+{
+    lock_guard<mutex> lock(lockerParams_);
+    frundGateway_.SendParams(model, motionParamsToString(motionParams_));
 }
