@@ -203,11 +203,11 @@ void TransitionActionServer::execute_cb(const TransitionGoalConstPtr &goal)
 
         // Выполняем задачу
         execute_transition_step();
-        percentage = counter / transition_time * 100;
+        percentage = counter / transition_time * 100.0;
         feedback_.percentage = percentage;
         as_.publishFeedback(feedback_);
         rate.sleep();
-        counter += 1 / execute_rate_;
+        counter += 1.0 / execute_rate_;
     }
 
     // Готово
