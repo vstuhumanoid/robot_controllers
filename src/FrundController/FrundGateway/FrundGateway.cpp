@@ -51,7 +51,9 @@ bool FrundGateway::ReceivePacket(char* frund_packet, int packet_size)
 void FrundGateway::SendPacket(char *frund_packet, int packet_size)
 {
     QByteArray datagram;
-    datagram.fromRawData(frund_packet, packet_size);
+    datagram.resize(packet_size);
+    memcpy(datagram.data(), frund_packet, packet_size);
+    //datagram.fromRawData(frund_packet, packet_size);
     socket_data_.writeDatagram(datagram, frund_host_, frund_port_);
 }
 

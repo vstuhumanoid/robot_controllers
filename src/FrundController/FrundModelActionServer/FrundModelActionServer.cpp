@@ -14,7 +14,7 @@ FrundModelActionServer::FrundModelActionServer(ros::NodeHandle& nh, string serve
     as_(nh, server_name, boost::bind(&FrundModelActionServer::execute_cb, this, _1), false),
     nh_(nh),
     transition_ac_("transition_controller", true),
-    execute_rate_(execute_rate)
+    execute_rate_(execute_rate*2)
 {
     int frund_port = 55556, frund_runner_port = 55557;
     std::string frund_runner_address = "192.168.1.11";
@@ -105,10 +105,10 @@ void FrundModelActionServer::execute_cb(const FrundModelGoalConstPtr &goal)
         {
             if(frundGateway_.ReceivePacket(packet, PACKET_SIZE))
             {
-                JointsCommand command = frundPacketConverter_.getMessage(packet);
+                jointsCommand_ = frundPacketConverter_.getMessage(packet);
                 TransitionGoal transition_goal;
-                transition_goal.names = command.names;
-                transition_goal.positions = command.positions;
+                transition_goal.names = jointsCommand_.names;
+                transition_goal.positions = jointsCommand_.positions;
                 transition_ac_.sendGoal(transition_goal);
                 state = 2;
             }
@@ -138,8 +138,9 @@ void FrundModelActionServer::execute_cb(const FrundModelGoalConstPtr &goal)
 
         if(state == 3)
         {
-            jointsMode_.names = command.names;
-            jointsMode_.modes.resize(jointsMode_.names.size());
+            jointsMode_.names.resize(jointsCommand_.names.size());
+            jointsMode_.modes.resize(jointsCommand_.names.size());
+            jointsMode_.names = jointsCommand_.names;
             for(int i = 0; i < jointsMode_.modes.size(); i++)
                 jointsMode_.modes[i] = mode;
             joints_mode_publisher_.publish(jointsMode_);
@@ -147,6 +148,16 @@ void FrundModelActionServer::execute_cb(const FrundModelGoalConstPtr &goal)
         }
 
         // основной цикл управления (отслеживать кансел)
+        if(state == 5)
+        {
+            if(frundGateway_.ReceivePacket(packet, PACKET_SIZE))
+            {
+                jointsCommand_ = frundPacketConverter_.getMessage(packet);
+                joints_command_publisher_.publish(jointsCommand_);
+                state = 4;
+            }
+        }
+
         if(state == 4)
         {
             locker_.lock();
@@ -154,16 +165,6 @@ void FrundModelActionServer::execute_cb(const FrundModelGoalConstPtr &goal)
             locker_.unlock();
             frundGateway_.SendPacket(packet, PACKET_SIZE);
             state = 5;
-        }
-
-        if(state == 5)
-        {
-            if(frundGateway_.ReceivePacket(packet, PACKET_SIZE))
-            {
-                command = frundPacketConverter_.getMessage(packet);
-                joints_command_publisher_.publish(command);
-                state = 4;
-            }
         }
 
         rate.sleep();
@@ -187,7 +188,7 @@ void FrundModelActionServer::stop_work(string message)
     frundGateway_.ReceivePacket(buffer, PACKET_SIZE);*/
 
     TypeJointMode mode;
-    mode.mode = TypeJointMode::TRACE;
+    mode.mode = TypeJointMode::BREAK;
     jointsMode_.names = jointState_.name;
     jointsMode_.modes.resize(jointState_.name.size());
     for(int i = 0; i < jointsMode_.modes.size(); i++)

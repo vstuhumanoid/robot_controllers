@@ -30,6 +30,7 @@ private:
     bool initializeGoal(robot_controllers::PlayFileGoalConstPtr goal);
     void execute_step();
     void execute_cb(const robot_controllers::PlayFileGoalConstPtr &goal);
+    void joints_params_cb(const robot_msgs::JointsParamsConstPtr &msg);
     //void preemptCB();
 
     sensor_msgs::JointState jointState_;
